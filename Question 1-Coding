@@ -1,0 +1,44 @@
+package labtest;
+
+import java.util.Scanner;
+
+public class Question1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input= new Scanner (System.in);// Scanner
+		
+		double tp,price,sum,dis,disprice,total=0;
+		int items,qty;
+		
+		System.out.println("Enter the number of items: ");
+		items = input.nextInt();
+		
+		for(int i=1; i<=items; i++) {
+			System.out.println("Enter price of item " +i+" :");
+			price = input.nextDouble();
+			System.out.println("Enter quantity of item ");
+			qty = input.nextInt();
+			
+			
+			sum = qty * price;
+			total += sum;
+		}
+		
+		if(total > 100) {
+			dis = total * 0.2;
+			disprice = total - dis;
+		}
+		
+		else {
+			dis = total * 0.1;
+			disprice = total - dis;
+		}
+		
+		System.out.println();
+		System.out.printf("Total price: RM%.2f\n", total);
+		System.out.printf("Discount received: RM%.2f\n", dis);
+		System.out.printf("Price to be paid: RM%.2f\n",disprice);
+	}
+
+}
