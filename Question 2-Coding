@@ -1,0 +1,36 @@
+package labtest;
+
+import java.util.Scanner;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double sales ,wages = 75 ,commission;
+		int hour;
+		
+		System.out.println("Enter sales: ");
+		sales = input.nextDouble();
+		
+		System.out.println("Enter hours worked: ");
+		hour = input.nextInt();
+		
+		if(sales >= 150 && sales<=300) {
+			commission = sales * 0.05;
+		}
+		
+		else if(sales >= 301 && sales <= 500) {
+			commission = sales * 0.1;
+		}
+		
+		else {
+			commission = sales * 0.15;
+		}
+		System.out.println();
+		System.out.printf("Commission: RM%.2f\n", commission);
+		System.out.printf("Daily wages: RM%.2f\n", wages);
+	}
+
+}
